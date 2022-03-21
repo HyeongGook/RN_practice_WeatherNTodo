@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-
+import Scanner from './Screens/Scanner';
 import WeatherScreen from './Screens/Home';
 import ToDoScreen from './Screens/Setting';
 
@@ -27,6 +27,19 @@ export default function App() {
         <Drawer.Screen 
           name="TO DO" 
           component={ToDoScreen} 
+          options={{
+            headerStyle: {
+              backgroundColor: 'black',
+            },
+            headerTitleStyle: {
+              color: "white",
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Drawer.Screen 
+          name="QR SCANNER" 
+          component={Scanner} 
           options={{
             headerStyle: {
               backgroundColor: 'black',
